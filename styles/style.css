@@ -36,6 +36,7 @@ body{
 
    display: flex;
    align-items: center;
+   cursor: pointer;
 }
 
 /*header*/
@@ -52,8 +53,9 @@ body{
    color: #000;
 
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    align-items: center;
+   user-select: none;
 }
 .logo{
    font-size: 32px;
@@ -68,14 +70,44 @@ body{
    display: flex;
    justify-content: space-between;
 }
+.hidden-menu-el{
+   display: none;
+}
+.hidden-menu-el a{
+   color: #000;
+   text-decoration: none;
+}
 :is(.menu-el) a{
    text-decoration: none;
    color:#000;
 }
-:is(.search-field) .search-area{
-   resize: none;
-   width: 575px;
-   align-content: center;
+.search-container {
+   position: relative;
+   width: 300px;
+}
+
+.search-container input {
+   width: 350px;
+   padding: 10px 40px; 
+   border-radius: 20px;
+   border: none;
+   background-color: #f1f1f1;
+   font-size: 16px;
+   outline: none;
+}
+
+.search-container input::placeholder {
+   color: #888;
+}
+
+.search-container .search-icon {
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #888;
+   font-size: 20px;
+   cursor: pointer;
 }
 .icons-container{
    display: flex;
@@ -85,3 +117,184 @@ body{
 :is(.icons-container) a{
    cursor: pointer;
 }
+@media (max-width: 1550px) {
+   .search-container input{
+      width: 300px;
+   }
+   .menu-container{
+      display: flex;
+      justify-content: center;
+      width: 150px;
+   }
+   .menu-el{
+      display: none;
+   }
+   .hidden-menu-el{
+      display:flex;
+   }
+}
+@media (max-width: 1450px) {
+   .search-container input{
+      width: 275px;
+   }
+}
+@media (max-width: 1350px) {
+   .search-container input{
+      width: 250px;
+   }
+}
+@media (max-width: 1250px) {
+   .search-container input{
+      width: 225px;
+   }
+}
+
+/*pages*/
+/*first page*/
+.first-page{
+   background-color: #F2F0F1;
+   height: 662px;
+}
+.fcontainer{
+   display: flex;
+   justify-content: space-around;
+}
+.leftside{
+   margin-top: 103px;
+}
+.introduce{
+   font-weight: 700;
+   font-size: 64px;
+}
+.introduce-p{
+   margin-top: 32px;
+}
+.shop-now{
+   margin-top: 32px;
+   
+}
+.shop-now a{
+   display: flex;
+   width: 210px;
+   height: 52px;
+   color: #fff;
+   text-decoration: none;
+
+   background-color: #000;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50px;
+}
+.intelligence{
+   margin-top: 48px;
+
+   display: flex;
+   justify-content: space-between;
+}
+.count{
+   font-weight: 700;
+   font-size: 40px;
+}
+.rightside{
+   display: flex;
+   align-items: flex-start;
+}
+
+/*brands page*/
+.brand-page{
+   height: 122px;
+   background-color: #000;
+   text-align: center;
+}
+.brands{
+   position: relative;
+   top: 35%;
+}
+.brand-logo{
+   display: inline;
+   vertical-align: middle;
+   margin-right: 125px;
+}
+@media (max-width: 1500px) {
+   .brand-logo{
+      margin-right: 85px;
+   }
+}
+@media (max-width: 1300px) {
+   .brand-logo{
+      margin-right: 75px;
+   }
+}
+
+/*second page*/
+.second-page{
+   display: flex;
+   justify-content: center;
+}
+.scontainer{
+   width: 90%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   border-bottom: 0.7px solid #9c9c9c;
+}
+.sp-text{
+   font-weight: 900;
+   font-size: 48px;
+   margin-top: 72px;
+}
+.arr-clothes{
+   width: 100%;
+   margin-top: 55px;
+}
+.arr-clothes ul{
+   display: flex;
+   justify-content: space-evenly;
+   list-style: none;
+}
+.arr-clothe-name{
+   margin-top: 16px;
+   font-weight: 700;
+   font-size: 20px;
+}
+.rate{
+   margin-top: 8px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.rate-in-num{
+   margin-left: 13px;
+}
+.price{
+   margin-top: 8px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.curr-price, .last-price{
+   font-weight: 700;
+   font-size: 24px;
+}
+.last-price{
+   color: #888;
+   margin-left: 10px;
+   text-decoration: line-through;
+}
+.view-all-btn{
+   margin-top: 36px;
+   margin-bottom: 64px;
+}
+.view-all-btn a{
+   width: 218px;
+   height: 52px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #fff;
+   color: #000;
+   border: 0.5px solid #ababab;
+   border-radius: 50px;
+}
+
