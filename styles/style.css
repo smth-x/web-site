@@ -320,12 +320,12 @@ ul{
 .fourth-container{
    display: flex;
    justify-content: center;
-   width: 80%;
    background-color: #F0F0F0;
    border: none;
    border-radius: 50px;
    flex-direction: column;
    align-items: center;
+   padding: 10px 75px 10px 75px;
 }
 .title{
    font-weight: 900;
@@ -336,11 +336,13 @@ ul{
 }
 .clothes-style{
    width: 80%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .first-row, .second-row{
    display: flex;
    flex-direction: row;
-   justify-content: space-evenly;
    gap: 20px;
 }
 .first-row{
@@ -350,6 +352,7 @@ ul{
    margin-bottom: 75px;
 }
 
+/*comments page*/
 .comments{
    margin-top: 80px;
    display: flex;
@@ -402,4 +405,130 @@ ul{
    margin-top: 12px;
    margin-bottom: 35px;
    color: #535353;
+}
+
+/*footer*/
+footer{
+   margin-top: 170px;
+}
+.footer-container{
+   width: 100%;
+   background-color: #F0F0F0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.upto-date{
+   background-color: #000;
+   color: #F0F0F0;
+   width: 60%;
+   height: 180px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 200px 0 100px;
+   border-radius: 30px;
+
+   transform: translateY(-50%);
+}
+.upto-date h2{
+   font-weight: 700;
+   font-size: 40px;
+}
+.subscribing{
+   width: 300px;
+   gap: 14px;
+   display: flex;
+   flex-direction: column;
+}
+.email-input-container {
+   position: relative;
+   display: inline-block;
+}
+
+.email-icon {
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 20px; 
+   color: #888; 
+}
+
+.email-input {
+   width: 215px;
+   padding: 10px 40px;
+   border-radius: 20px; 
+   border: 1px solid #ccc; 
+   font-size: 16px;
+   outline: none;
+   background-color: #f9f9f9;
+}
+.subscribe{
+   height: 40px;
+   border-radius: 50px;
+   cursor: pointer;
+
+   font-weight: 500;
+}
+
+.contacts{
+   width: 75%;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #9c9c9c;
+   padding-bottom: 50px;
+}
+.email-input::placeholder {
+   color: #888; 
+}
+.ss-logo{
+   font-weight: 700;
+   font-size: 33px;
+}
+.ss-text{
+   margin-top: 25px;
+   font-size: 14px;
+   color: #535353;
+}
+.ss-links{
+   margin-top: 35px;
+   display: flex;
+   flex-direction: row;
+   gap: 12px;
+}
+.company-links, .help-links, .faq-links, .resources-links{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+:is(.company-links, .help-links, .faq-links, .resources-links)
+li a{
+   color: #535353;
+   text-decoration: none;
+}
+.main-li{
+   margin-bottom: 10px;
+   color: #000;
+}
+.rights{
+   width: 75%;
+   margin-top: 25px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 75px;
+   align-items: center;
+
+   color: #9c9c9c;
+   font-size: 13px;
+   font-weight: 400;
+}
+.social-icons ul{
+   display: flex;
+   flex-direction: row;
+}
+.social-icons img{
+   cursor: pointer;
 }
